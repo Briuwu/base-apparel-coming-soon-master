@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  font-size: 62.50%;
+  font-family: "Josefin Sans", sans-serif;
+  color: #413a3a;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.logo {
+  padding-left: 2em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.logo img {
+  width: 10em;
+}
+
+.hero {
+  background: url(../images/hero-mobile.jpg) no-repeat;
+  height: 25em;
+  background-size: cover;
+}
+
+.details {
+  padding: 0 2.25em;
+  text-align: center;
+}
+
+.details__title {
+  margin-bottom: .25em;
+  font-size: 2.5rem;
+  letter-spacing: 10px;
+  font-weight: 400;
+}
+
+.details__title span {
+  font-weight: 300;
+  color: #ce9797;
+}
+
+.details__info {
+  font-size: 1rem;
+  color: #ce9797;
+  margin-bottom: 2em;
+  line-height: 1.5;
+}
+
+.details__submit {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.details__submit--error {
+  position: absolute;
+  top: 10px;
+  right: 70px;
+  visibility: hidden;
+}
+
+.details__submit--warning {
+  font-size: 0.8rem;
+  color: #f96262;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 0.5em;
+  visibility: hidden;
+}
+
+.details__submit form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.details__submit form input {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  border: 1px solid #ce9797;
+  border-radius: 10em;
+  height: 3.5em;
+  outline: none;
+  padding: 1em;
+}
+
+.details__submit form .btn {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.details__submit form .btn--arrow {
+  padding: 1em 2em;
+  border-radius: 10em;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+}
+
+input::-webkit-input-placeholder {
+  color: #ce9797;
+}
+
+input:-ms-input-placeholder {
+  color: #ce9797;
+}
+
+input::-ms-input-placeholder {
+  color: #ce9797;
+}
+
+input::placeholder {
+  color: #ce9797;
+}
+
+#email.visible {
+  border: 1px solid #f96262;
+}
+
+.visible {
+  visibility: visible;
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    -ms-grid-columns: 60% 40%;
+        grid-template-columns: 60% 40%;
+    -ms-grid-rows: max-content 1fr;
+        grid-template-rows: -webkit-max-content 1fr;
+        grid-template-rows: max-content 1fr;
+  }
+  .logo {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    place-self: center;
+    padding-top: 5em;
+    margin-right: 28em;
+  }
+  .logo img {
+    width: 18em;
+  }
+  .hero {
+    place-items: center;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / span 2;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    background: url(../images/hero-desktop.jpg) no-repeat;
+    height: auto;
+    background-size: cover;
+  }
+  .details {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    text-align: left;
+    max-width: 50em;
+    margin: auto;
+  }
+  .details__title {
+    font-size: 4rem;
+    letter-spacing: 15px;
+  }
+  footer {
+    font-size: 0.8rem;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / span 2;
+    margin-top: auto;
+    margin-bottom: 1em;
+  }
+}
+/*# sourceMappingURL=main.css.map */

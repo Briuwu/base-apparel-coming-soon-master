@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/main.css">
+  <script src="./app.js" defer></script>
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main>
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="./images/logo.svg" alt="">
+    </div>
+
+    <!-- HERO IMAGE -->
+    <div class="hero"></div>
+
+    <!-- DETAILS INFO -->
+    <div class="details">
+      <h1 class="details__title"><span>WE'RE</span><br>COMING<br>SOON</h1>
+      <p class="details__info">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+      <div class="details__submit">
+        <form action="">
+          <input type="email" name="email" id="email" placeholder="Email Address" autocomplete="off">
+          <div class="btn">
+            <button id="btn"><img src="./images/icon-arrow.svg" alt="" class="btn--arrow"></button>
+          </div>
+        </form>
+        <img src="./images/icon-error.svg" alt="" class="details__submit--error" id="iconWarning">
+        <p class="details__submit--warning">Please provide a valid email</p>
+      </div>
+    </div>
+
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://www.frontendmentor.io/profile/Briuwu7474" target="_blank">Briuwu</a>.
+      </p>
+    </footer>
+  </main>
+</body>
+</html>

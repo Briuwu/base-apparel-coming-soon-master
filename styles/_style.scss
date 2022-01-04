@@ -1,0 +1,106 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.logo {
+  padding-left: 2em;
+  align-self: center;
+
+  img {
+    width: 10em;
+  }
+}
+
+.hero {
+  background: url(../images/hero-mobile.jpg) no-repeat;
+  height: 25em;
+  background-size: cover;
+}
+
+.details {
+  padding: 0 2.25em;
+  text-align: center;
+
+  &__title {
+    margin-bottom: .25em;
+    font-size: 2.5rem;
+    letter-spacing: 10px;
+    font-weight: 400;
+
+    & span {
+      font-weight: 300;
+      color: $desaturated-red;
+    }
+  }
+
+  &__info {
+    font-size: 1rem;
+    color: $desaturated-red;
+    margin-bottom: 2em;
+    line-height: 1.5;
+  }
+
+  &__submit {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &--error {
+      position: absolute;
+      top: 10px;
+      right: 70px;
+      visibility: hidden;
+    }
+
+    &--warning {
+      font-size: 0.8rem;
+      color: $soft-red;
+      align-self: flex-start;
+      margin: 0.5em;
+      visibility: hidden;
+    }
+
+    & form {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+
+      & input {
+        grid-row: 1;
+        grid-column: 1;
+
+        border: 1px solid $desaturated-red;
+        border-radius: 10em;
+        height: 3.5em;
+        outline: none;
+        padding: 1em;
+      }
+
+      & .btn {
+        grid-row: 1;
+        grid-column: 1;
+        justify-self: end;
+
+        &--arrow {
+          padding: 1em 2em;
+          border-radius: 10em;
+          background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        }
+      }
+    }
+  }
+}
+
+input::placeholder {
+  color: $desaturated-red;
+}
+
+#email.visible {
+  border: 1px solid $soft-red;
+}
+
+
+.visible {
+  visibility: visible;
+}
